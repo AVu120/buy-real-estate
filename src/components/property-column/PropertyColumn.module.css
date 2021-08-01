@@ -1,0 +1,17 @@
+.column {
+  margin: 10px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.results {
+  background-color: rgb(219, 219, 219);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+}

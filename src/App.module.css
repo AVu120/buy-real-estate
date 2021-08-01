@@ -5,28 +5,7 @@
   overflow: auto;
 }
 
-.heading {
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
 .columns {
   display: flex;
   justify-content: center;
-}
-
-.column {
-  margin: 10px;
-}
-
-.results {
-  background-color: rgb(219, 219, 219);
-  margin: 5px;
-  padding: 5px;
-  border-radius: 10px;
-  width: fit-content;
-}
-
-.saved_properties {
-  composes: results;
 }

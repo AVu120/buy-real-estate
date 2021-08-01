@@ -1,5 +1,4 @@
 import styles from "./PropertyCard.module.css";
-
 interface IPropertyCard {
   price: string;
   agencyColor: string;
@@ -18,11 +17,7 @@ const PropertyCard = ({
         className={styles.header}
         style={{ backgroundColor: agencyColor }}
       >
-        <img
-          src={agencyLogoUrl}
-          alt="First National Real Estate Logo"
-          className={styles.logo}
-        />
+        <img src={agencyLogoUrl} alt="Agency Logo" className={styles.logo} />
       </header>
       <img
         src={mainImageUrl}
