@@ -1,4 +1,4 @@
-import Button from "../buttons/Button";
+import Button from "./Button";
 import styles from "./PropertyCard.module.css";
 interface IPropertyCard {
   price: string;
