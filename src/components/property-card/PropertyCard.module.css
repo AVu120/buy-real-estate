@@ -42,6 +42,14 @@
   font-weight: 400;
 }
 
+.card .button {
+  visibility: hidden;
+}
+
+.card:hover .button {
+  visibility: visible;
+}
+
 .button {
   position: absolute;
   bottom: 20%;
