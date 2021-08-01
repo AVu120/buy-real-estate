@@ -78,3 +78,10 @@
   color: var(--removeFontColor);
   border: 2px solid var(--removeFontColor);
 }
+
+.already_added_button {
+  composes: button;
+  background-color: rgb(184, 209, 233);
+  border: 2px solid rgb(0, 48, 94);
+  cursor: default;
+}

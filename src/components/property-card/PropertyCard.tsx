@@ -21,11 +21,13 @@ const PropertyCard = ({
   buttonAction,
 }: IPropertyCard) => {
   const { state } = useContext(StateContext);
-  let alreadyAdded;
+  let alreadyAdded: boolean;
   if (buttonActionType === "add") {
     alreadyAdded = state.saved.some(
       (savedResult: IPropertyResult) => savedResult.id === id
     );
+  } else {
+    alreadyAdded = false;
   }
 
   return (
@@ -46,10 +48,14 @@ const PropertyCard = ({
         type="button"
         className={
           buttonActionType === "add"
-            ? styles.add_property_button
+            ? alreadyAdded
+              ? styles.already_added_button
+              : styles.add_property_button
             : styles.remove_property_button
         }
-        onClick={() => buttonAction(id)}
+        onClick={() => {
+          if (!alreadyAdded) buttonAction(id);
+        }}
       >
         {buttonActionType === "add"
           ? alreadyAdded
