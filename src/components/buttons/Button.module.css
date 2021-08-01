@@ -8,7 +8,6 @@
 .button {
   position: absolute;
   bottom: 20%;
-  left: 25%;
   border-radius: 10px;
   padding: 5px;
   font-weight: bold;
@@ -19,6 +18,7 @@
   background-color: var(--addBackgroundColor);
   color: var(--addFontColor);
   border: 2px solid var(--addFontColor);
+  left: 22%;
 }
 
 .remove_property_button {
@@ -26,4 +26,5 @@
   background-color: var(--removeBackgroundColor);
   color: var(--removeFontColor);
   border: 2px solid var(--removeFontColor);
+  left: 15%;
 }
