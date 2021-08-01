@@ -20,6 +20,7 @@ const PropertyColumn = ({
         {results?.length ? (
           results.map((result) => (
             <PropertyCard
+              key={`property-card-id-${result.id}`}
               price={result.price}
               agencyColor={result.agency.brandingColors.primary}
               agencyLogoUrl={result.agency.logo}
