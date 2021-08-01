@@ -14,5 +14,10 @@
 
 .no_results {
   width: 185px;
-  text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .no_results {
+    width: 45vw;
+  }
 }
