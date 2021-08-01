@@ -16,6 +16,12 @@ describe("renders app correctly", () => {
 });
 
 describe("functionality works", () => {
+  test("remove property", () => {
+    render(<App />);
+    const removePropertyButton = screen.getByText(/Remove property/i);
+    fireEvent.click(removePropertyButton);
+    expect(screen.queryByText(/Remove property/i)).toBe(null);
+  });
   test("add property", async () => {
     render(<App />);
     const addPropertyButtons = screen.getAllByText(/Add property/i);
@@ -26,10 +32,27 @@ describe("functionality works", () => {
     expect(removePropertyButtons.length).toBe(2);
   });
 
-  test("remove property", () => {
+  test("remove property then add property", async () => {
     render(<App />);
-    const removePropertyButton = screen.getByText(/Remove property/i);
-    fireEvent.click(removePropertyButton);
+    fireEvent.click(screen.getByText(/Remove property/i));
     expect(screen.queryByText(/Remove property/i)).toBe(null);
+    const addPropertyButtons = screen.getAllByText(/Add property/i);
+    fireEvent.click(addPropertyButtons[0]);
+    await screen.findByText(/Remove property/i);
+  });
+
+  test("Add property then remove property", async () => {
+    render(<App />);
+    const addPropertyButtons = screen.getAllByText(/Add property/i);
+    fireEvent.click(addPropertyButtons[0]);
+    const removePropertyButtons = await screen.findAllByText(
+      /Remove property/i
+    );
+    expect(removePropertyButtons.length).toBe(2);
+    fireEvent.click(removePropertyButtons[0]);
+    const updatedRemovePropertyButtons = await screen.findAllByText(
+      /Remove property/i
+    );
+    expect(updatedRemovePropertyButtons.length).toBe(1);
   });
 });
