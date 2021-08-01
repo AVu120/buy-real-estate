@@ -46,10 +46,6 @@
   visibility: hidden;
 }
 
-.card:hover .button {
-  visibility: visible;
-}
-
 .button {
   position: absolute;
   bottom: 20%;
@@ -84,4 +80,16 @@
   background-color: rgb(184, 209, 233);
   border: 2px solid rgb(0, 48, 94);
   cursor: default;
+}
+
+.card:hover .add_property_button {
+  visibility: visible;
+}
+
+.card:hover .remove_property_button {
+  visibility: visible;
+}
+
+.card .already_added_button {
+  visibility: visible;
 }
