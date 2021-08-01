@@ -4,7 +4,9 @@ import {
   default as ResultsColumn,
   default as SavedPropertiesColumn,
 } from "./components/property-column/PropertyColumn";
-import { useState } from "react";
+import { useState, createContext } from "react";
+
+export const StateContext = createContext<any>(null);
 
 function App() {
   const [state, setState] = useState(testState);
@@ -34,18 +36,20 @@ function App() {
   return (
     <div className={styles.App}>
       <div className={styles.columns}>
-        <ResultsColumn
-          heading="Results"
-          results={state.results}
-          buttonActionType="add"
-          buttonAction={addProperty}
-        />
-        <SavedPropertiesColumn
-          heading="Saved Properties"
-          results={state.saved}
-          buttonActionType="remove"
-          buttonAction={removeProperty}
-        />
+        <StateContext.Provider value={{ state, setState }}>
+          <ResultsColumn
+            heading="Results"
+            results={state.results}
+            buttonActionType="add"
+            buttonAction={addProperty}
+          />
+          <SavedPropertiesColumn
+            heading="Saved Properties"
+            results={state.saved}
+            buttonActionType="remove"
+            buttonAction={removeProperty}
+          />
+        </StateContext.Provider>
       </div>
     </div>
   );

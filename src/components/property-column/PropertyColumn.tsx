@@ -6,7 +6,7 @@ interface IAgencyInfo {
   logo: string;
 }
 
-interface IPropertyResult {
+export interface IPropertyResult {
   price: string;
   agency: IAgencyInfo;
   id: string;

@@ -1,5 +1,7 @@
-import Button from "./Button";
 import styles from "./PropertyCard.module.css";
+import { StateContext } from "../../App";
+import { useContext } from "react";
+import { IPropertyResult } from "../property-column/PropertyColumn";
 interface IPropertyCard {
   price: string;
   agencyColor: string;
@@ -18,6 +20,14 @@ const PropertyCard = ({
   buttonActionType,
   buttonAction,
 }: IPropertyCard) => {
+  const { state } = useContext(StateContext);
+  let alreadyAdded;
+  if (buttonActionType === "add") {
+    alreadyAdded = state.saved.some(
+      (savedResult: IPropertyResult) => savedResult.id === id
+    );
+  }
+
   return (
     <div className={styles.card}>
       <header
@@ -41,7 +51,11 @@ const PropertyCard = ({
         }
         onClick={() => buttonAction(id)}
       >
-        {buttonActionType === "add" ? "Add property" : "Remove property"}
+        {buttonActionType === "add"
+          ? alreadyAdded
+            ? "Already added"
+            : "Add property"
+          : "Remove property"}
       </button>
       <footer className={styles.footer}>
         <div className={styles.price}>{price}</div>
