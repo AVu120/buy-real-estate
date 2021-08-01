@@ -11,6 +11,10 @@ export const StateContext = createContext<any>(null);
 function App() {
   const [state, setState] = useState(testState);
 
+  /**
+   * Adds property to the 'Saved Properties' column.
+   * @param id id of added property.
+   */
   const addProperty = (id: string): void => {
     const addedProperty = state.results.find((result) => result.id === id);
     if (addedProperty)
@@ -21,6 +25,10 @@ function App() {
     alert("Error adding property, unable to find property in Results.");
   };
 
+  /**
+   * Remove property from the 'Saved Properties' column.
+   * @param id id of the removed property.
+   */
   const removeProperty = (id: string): void => {
     const removedProperty = state.saved.find((result) => result.id === id);
     if (removedProperty)
