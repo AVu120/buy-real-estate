@@ -28,17 +28,21 @@ const PropertyColumn = ({
     <div style={{ minHeight: "150px", minWidth: "150px" }}>
       <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.results}>
-        {results?.map((result) => (
-          <PropertyCard
-            price={result.price}
-            agencyColor={result.agency.brandingColors.primary}
-            agencyLogoUrl={result.agency.logo}
-            mainImageUrl={result.mainImage}
-            id={result.id}
-            buttonActionType={buttonActionType}
-            buttonAction={buttonAction}
-          />
-        ))}
+        {results?.length ? (
+          results.map((result) => (
+            <PropertyCard
+              price={result.price}
+              agencyColor={result.agency.brandingColors.primary}
+              agencyLogoUrl={result.agency.logo}
+              mainImageUrl={result.mainImage}
+              id={result.id}
+              buttonActionType={buttonActionType}
+              buttonAction={buttonAction}
+            />
+          ))
+        ) : (
+          <div className={styles.no_results}></div>
+        )}
       </div>
     </div>
   );

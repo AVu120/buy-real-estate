@@ -11,3 +11,8 @@
   border-radius: 10px;
   width: fit-content;
 }
+
+.no_results {
+  width: 185px;
+  text-align: center;
+}
