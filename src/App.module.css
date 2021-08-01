@@ -8,7 +8,7 @@
 .heading {
   text-align: center;
   margin-bottom: 10px;
-  font-size: min(20px, 3.5vw);
+  font-size: 20px;
 }
 .columns {
   display: flex;
