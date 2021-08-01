@@ -5,13 +5,17 @@ interface IPropertyCard {
   agencyColor: string;
   agencyLogoUrl: string;
   mainImageUrl: string;
-  buttonAction: "add" | "remove";
+  buttonActionType: "add" | "remove";
+  id: string;
+  buttonAction: Function;
 }
 const PropertyCard = ({
   price,
   agencyColor,
   agencyLogoUrl,
   mainImageUrl,
+  id,
+  buttonActionType,
   buttonAction,
 }: IPropertyCard) => {
   return (
@@ -27,7 +31,7 @@ const PropertyCard = ({
         alt="house for sale"
         className={styles.house_photo}
       />
-      <Button action={buttonAction} />
+      <Button action={buttonActionType} onClick={() => buttonAction(id)} />
 
       <footer className={styles.footer}>
         <div className={styles.price}>{price}</div>

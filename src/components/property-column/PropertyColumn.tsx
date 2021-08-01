@@ -15,15 +15,17 @@ interface IPropertyResult {
 interface IPropertyColumn {
   results: IPropertyResult[];
   heading: string;
-  buttonAction: "add" | "remove";
+  buttonActionType: "add" | "remove";
+  buttonAction: Function;
 }
 const PropertyColumn = ({
   results,
   heading,
+  buttonActionType,
   buttonAction,
 }: IPropertyColumn) => {
   return (
-    <div>
+    <div style={{ minHeight: "150px", minWidth: "150px" }}>
       <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.results}>
         {results?.map((result) => (
@@ -32,6 +34,8 @@ const PropertyColumn = ({
             agencyColor={result.agency.brandingColors.primary}
             agencyLogoUrl={result.agency.logo}
             mainImageUrl={result.mainImage}
+            id={result.id}
+            buttonActionType={buttonActionType}
             buttonAction={buttonAction}
           />
         ))}
