@@ -9,8 +9,16 @@ function App() {
   return (
     <div className={styles.App}>
       <div className={styles.columns}>
-        <PropertyColumn heading="Results" results={state.results} />
-        <PropertyColumn heading="Saved Properties" results={state.saved} />
+        <PropertyColumn
+          heading="Results"
+          results={state.results}
+          buttonAction="add"
+        />
+        <PropertyColumn
+          heading="Saved Properties"
+          results={state.saved}
+          buttonAction="remove"
+        />
       </div>
     </div>
   );

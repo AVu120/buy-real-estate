@@ -1,5 +1,29 @@
+:root {
+  --addFontColor: #276b0e;
+  --addBackgroundColor: #dcedd6;
+  --removeFontColor: #ff0a13;
+  --removeBackgroundColor: #f4cccd;
+}
+
 .button {
   position: absolute;
   bottom: 20%;
   left: 25%;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.add_property_button {
+  composes: button;
+  background-color: var(--addBackgroundColor);
+  color: var(--addFontColor);
+  border: 2px solid var(--addFontColor);
+}
+
+.remove_property_button {
+  composes: button;
+  background-color: var(--removeBackgroundColor);
+  color: var(--removeFontColor);
+  border: 2px solid var(--removeFontColor);
 }
