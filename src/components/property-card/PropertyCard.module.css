@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  box-shadow: rgb(0 0 0 / 20%) 0px 0.08rem 0.3rem 0px;
+  margin: 10px 5px;
+}
+
+.house_photo {
+  max-height: 150px;
+  height: 100%;
+  width: 100%;
+  max-width: 175px;
+}
+
+.logo {
+  height: 50%;
+  width: 50%;
+  margin: 5px 0 0 5px;
+}
+.header {
+  /* background-color: var(--backgroundColor); */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.footer {
+  font-size: small;
+  /* height: 20px; */
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.price {
+  margin: 5px 0 5px 5px;
+  font-weight: 400;
+}

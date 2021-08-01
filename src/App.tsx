@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css";
+import { testState } from "../src/utils/testState";
+import PropertyCard from "../src/components/property-card/PropertyCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <div className={styles.columns}>
+        <div>
+          <h2 className={styles.heading}>Results</h2>
+          <div className={styles.results}>
+            <PropertyCard />
+            <PropertyCard />
+            <PropertyCard />
+          </div>
+        </div>
+        <div>
+          <h2 className={styles.heading}>Saved Properties</h2>
+          <div className={styles.saved_properties}>
+            <PropertyCard />
+            <PropertyCard />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
