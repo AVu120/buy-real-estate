@@ -39,6 +39,6 @@ npm test
 
 # Extra Features
 
-- Clicking the 'Add property' button will permanently display an 'Already added' button on the property card until it's removed from the 'Saved Properties' column.
-- App is responsively designed to work and display well on all device screen sizes.
+- Clicking the 'Add property' button will permanently display an 'Already added' button on the property card in the 'Results' column until it's removed from the 'Saved Properties' column.
+- App is responsively designed to work and display well on all device screen sizes with width > 260px.
 - App code is typed using typescript.
