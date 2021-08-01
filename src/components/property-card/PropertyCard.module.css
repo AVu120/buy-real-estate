@@ -1,3 +1,10 @@
+:root {
+  --addFontColor: #276b0e;
+  --addBackgroundColor: #dcedd6;
+  --removeFontColor: #ff0a13;
+  --removeBackgroundColor: #f4cccd;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -35,7 +42,27 @@
   font-weight: 400;
 }
 
-.button_container {
-  /* position: relative; */
-  /* right: 200px; */
+.button {
+  position: absolute;
+  bottom: 20%;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add_property_button {
+  composes: button;
+  background-color: var(--addBackgroundColor);
+  color: var(--addFontColor);
+  border: 2px solid var(--addFontColor);
+  left: 22%;
+}
+
+.remove_property_button {
+  composes: button;
+  background-color: var(--removeBackgroundColor);
+  color: var(--removeFontColor);
+  border: 2px solid var(--removeFontColor);
+  left: 15%;
 }
