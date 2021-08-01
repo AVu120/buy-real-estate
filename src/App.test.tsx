@@ -1,28 +1,28 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, findByText } from "@testing-library/react";
 import App from "./App";
 
-describe("renders app correctly", () => {
-  test("renders Results column correctly", () => {
+describe("Renders app correctly", () => {
+  test("Renders Results column correctly", () => {
     render(<App />);
     const linkElement = screen.getByText(/Results/i);
     expect(linkElement).toBeInTheDocument();
   });
 
-  test("renders Saved Properties column correctly", () => {
+  test("Renders Saved Properties column correctly", () => {
     render(<App />);
     const linkElement = screen.getByText(/Saved Properties/i);
     expect(linkElement).toBeInTheDocument();
   });
 });
 
-describe("functionality works", () => {
-  test("remove property", () => {
+describe("Functionality works", () => {
+  test("Remove property", () => {
     render(<App />);
     const removePropertyButton = screen.getByText(/Remove property/i);
     fireEvent.click(removePropertyButton);
     expect(screen.queryByText(/Remove property/i)).toBe(null);
   });
-  test("add property", async () => {
+  test("Add property", async () => {
     render(<App />);
     const addPropertyButtons = screen.getAllByText(/Add property/i);
     fireEvent.click(addPropertyButtons[0]);
@@ -32,7 +32,7 @@ describe("functionality works", () => {
     expect(removePropertyButtons.length).toBe(2);
   });
 
-  test("remove property then add property", async () => {
+  test("Remove property then add property", async () => {
     render(<App />);
     fireEvent.click(screen.getByText(/Remove property/i));
     expect(screen.queryByText(/Remove property/i)).toBe(null);
@@ -54,5 +54,15 @@ describe("functionality works", () => {
       /Remove property/i
     );
     expect(updatedRemovePropertyButtons.length).toBe(1);
+  });
+
+  test("Display added property as 'already added'", async () => {
+    render(<App />);
+    const addPropertyButtons = screen.getAllByText(/Add property/i);
+    fireEvent.click(addPropertyButtons[0]);
+    await screen.findByText(/Already added/i);
+    const removePropertyButtons = screen.getAllByText(/Remove property/i);
+    fireEvent.click(removePropertyButtons[1]);
+    expect(screen.queryByText(/Already added/i)).toBe(null);
   });
 });
