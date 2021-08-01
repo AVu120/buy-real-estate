@@ -8,11 +8,15 @@
 .heading {
   text-align: center;
   margin-bottom: 10px;
-  font-size: min(30px, 3.5vw);
+  font-size: min(20px, 3.5vw);
 }
 .columns {
   display: flex;
   justify-content: center;
+}
+
+.column {
+  margin: 10px;
 }
 
 .results {
@@ -20,6 +24,7 @@
   margin: 5px;
   padding: 5px;
   border-radius: 10px;
+  width: fit-content;
 }
 
 .saved_properties {

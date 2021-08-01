@@ -6,7 +6,7 @@ function App() {
   return (
     <div className={styles.App}>
       <div className={styles.columns}>
-        <div>
+        <div className={styles.column}>
           <h2 className={styles.heading}>Results</h2>
           <div className={styles.results}>
             <PropertyCard />
@@ -14,7 +14,7 @@ function App() {
             <PropertyCard />
           </div>
         </div>
-        <div>
+        <div className={styles.column}>
           <h2 className={styles.heading}>Saved Properties</h2>
           <div className={styles.saved_properties}>
             <PropertyCard />
