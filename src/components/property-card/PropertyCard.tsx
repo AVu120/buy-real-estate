@@ -1,3 +1,4 @@
+import Button from "../buttons/Button";
 import styles from "./PropertyCard.module.css";
 interface IPropertyCard {
   price: string;
@@ -24,6 +25,8 @@ const PropertyCard = ({
         alt="house for sale"
         className={styles.house_photo}
       />
+      <Button label="add property" />
+
       <footer className={styles.footer}>
         <div className={styles.price}>{price}</div>
       </footer>
