@@ -25,7 +25,7 @@ const PropertyColumn = ({
   buttonAction,
 }: IPropertyColumn) => {
   return (
-    <div style={{ minHeight: "150px", minWidth: "150px" }}>
+    <div>
       <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.results}>
         {results?.length ? (
