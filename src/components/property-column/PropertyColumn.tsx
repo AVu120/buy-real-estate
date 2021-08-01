@@ -23,7 +23,7 @@ const PropertyColumn = ({
   buttonAction,
 }: IPropertyColumn) => {
   return (
-    <div className={styles.column}>
+    <div>
       <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.results}>
         {results?.map((result) => (
