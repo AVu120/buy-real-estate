@@ -1,17 +1,6 @@
 import PropertyCard from "../property-card/PropertyCard";
 import styles from "./PropertyColumn.module.css";
-
-interface IAgencyInfo {
-  brandingColors: { primary: string };
-  logo: string;
-}
-
-export interface IPropertyResult {
-  price: string;
-  agency: IAgencyInfo;
-  id: string;
-  mainImage: string;
-}
+import { IPropertyResult } from "../../types/Property";
 interface IPropertyColumn {
   results: IPropertyResult[];
   heading: string;

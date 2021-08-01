@@ -1,7 +1,7 @@
 import styles from "./PropertyCard.module.css";
 import { StateContext } from "../../App";
 import { useContext } from "react";
-import { IPropertyResult } from "../property-column/PropertyColumn";
+import { IPropertyResult } from "../../types/Property";
 interface IPropertyCard {
   price: string;
   agencyColor: string;
@@ -22,6 +22,7 @@ const PropertyCard = ({
 }: IPropertyCard) => {
   const { state } = useContext(StateContext);
   let alreadyAdded: boolean;
+
   if (buttonActionType === "add") {
     alreadyAdded = state.saved.some(
       (savedResult: IPropertyResult) => savedResult.id === id
