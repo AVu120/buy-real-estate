@@ -1,3 +1,7 @@
+# About
+
+Navigate through properties and add/remove them to/from a saved properties list.
+
 # Play with App
 
 [avu120.github.io/buy-real-estate/](https://avu120.github.io/buy-real-estate/)
