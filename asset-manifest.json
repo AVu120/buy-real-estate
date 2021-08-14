@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/buy-real-estate/static/css/main.2d73cf89.chunk.css",
+    "main.css": "/buy-real-estate/static/css/main.1ec5ccad.chunk.css",
     "main.js": "/buy-real-estate/static/js/main.10502b53.chunk.js",
     "main.js.map": "/buy-real-estate/static/js/main.10502b53.chunk.js.map",
     "runtime-main.js": "/buy-real-estate/static/js/runtime-main.1d955fea.js",
@@ -10,13 +10,13 @@
     "static/js/3.89861a3c.chunk.js": "/buy-real-estate/static/js/3.89861a3c.chunk.js",
     "static/js/3.89861a3c.chunk.js.map": "/buy-real-estate/static/js/3.89861a3c.chunk.js.map",
     "index.html": "/buy-real-estate/index.html",
-    "static/css/main.2d73cf89.chunk.css.map": "/buy-real-estate/static/css/main.2d73cf89.chunk.css.map",
+    "static/css/main.1ec5ccad.chunk.css.map": "/buy-real-estate/static/css/main.1ec5ccad.chunk.css.map",
     "static/js/2.1f903780.chunk.js.LICENSE.txt": "/buy-real-estate/static/js/2.1f903780.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d955fea.js",
     "static/js/2.1f903780.chunk.js",
-    "static/css/main.2d73cf89.chunk.css",
+    "static/css/main.1ec5ccad.chunk.css",
     "static/js/main.10502b53.chunk.js"
   ]
 }
