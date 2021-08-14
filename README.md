@@ -1,6 +1,6 @@
 # Play with App
 
-avu120.github.io/buy-real-estate/
+[avu120.github.io/buy-real-estate/](https://avu120.github.io/buy-real-estate/)
 
 # Instructions to Build This Project
 
