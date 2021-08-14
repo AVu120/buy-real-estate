@@ -14,6 +14,14 @@
   position: relative;
 }
 
+.card:first-of-type {
+  margin: 5px 5px;
+}
+
+.card:last-of-type {
+  margin: 5px 5px;
+}
+
 .house_photo {
   max-height: 150px;
   height: 100%;
