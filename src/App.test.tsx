@@ -1,3 +1,4 @@
+import { findAllByText } from "@testing-library/react";
 import { render, screen, fireEvent, findByText } from "@testing-library/react";
 import App from "./App";
 
@@ -60,9 +61,9 @@ describe("Functionality works", () => {
     render(<App />);
     const addPropertyButtons = screen.getAllByText(/Add property/i);
     fireEvent.click(addPropertyButtons[0]);
-    await screen.findByText(/Already added/i);
+    expect((await screen.findAllByText(/Already added/i)).length).toBe(2);
     const removePropertyButtons = screen.getAllByText(/Remove property/i);
     fireEvent.click(removePropertyButtons[1]);
-    expect(screen.queryByText(/Already added/i)).toBe(null);
+    expect((await screen.findAllByText(/Already added/i)).length).toBe(1);
   });
 });
