@@ -1,3 +1,7 @@
+# Play with App
+
+avu120.github.io/buy-real-estate/
+
 # Instructions to Build This Project
 
 Note: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -36,9 +40,6 @@ npm test
 - Click the 'Add property' button to create the property in the 'Saved Properties' column.
 - Hover over a property card in the 'Saved Properties' column to display a 'Remove property' button.
 - Click the 'Remove property' button to remove the property from the 'Saved Properties' column.
-
-# Extra Features
-
 - Clicking the 'Add property' button will permanently display an 'Already added' button on the property card in the 'Results' column until it's removed from the 'Saved Properties' column.
 - App is responsively designed to work and display well on all device screen sizes with width > 270px (which should be fine as the smallest screen size in active use is the iPhone 5/SE which is 320px wide).
 - App code is typed using typescript.
