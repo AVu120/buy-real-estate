@@ -15,11 +15,15 @@
 }
 
 .card:first-of-type {
-  margin: 5px 5px;
+  margin: 5px 5px 10px;
 }
 
 .card:last-of-type {
-  margin: 5px 5px;
+  margin: 10px 5px 5px;
+}
+
+.card:only-of-type {
+  margin: 5px;
 }
 
 .house_photo {
